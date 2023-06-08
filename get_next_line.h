@@ -6,14 +6,14 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:13:42 by escastel          #+#    #+#             */
-/*   Updated: 2023/06/08 13:48:10 by escastel         ###   ########.fr       */
+/*   Updated: 2023/06/08 13:56:46 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5
+#  define BUFFER_SIZE 42
 # endif
 # include <unistd.h>
 # include <stdlib.h>
