@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:15:28 by escastel          #+#    #+#             */
-/*   Updated: 2023/06/08 13:48:42 by escastel         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:08:56 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 	char	*ptr;
 
-	ptr = (char *)malloc(count * size);
+	ptr = (char *)malloc((count * size));
 	if (!ptr)
 		return (NULL);
 	i = 0;
@@ -58,9 +58,9 @@ char	*ft_strjoin(char *s1, char *s2)
 	size_t	i;
 	size_t	j;
 
-	ptr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	ptr = (char *)ft_calloc((ft_strlen(s1) + ft_strlen(s2)) + 1, sizeof(char));
 	if (!ptr)
-		return (0);
+		return (free(s1), NULL);
 	i = 0;
 	while (s1[i])
 	{
