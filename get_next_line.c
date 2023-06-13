@@ -6,16 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:08:18 by escastel          #+#    #+#             */
-/*   Updated: 2023/06/13 13:11:42 by escastel         ###   ########.fr       */
+/*   Updated: 2023/06/13 13:28:38 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-/* void	ft_lek(void)
-{
-	system("leaks -q a.out");
-} */
 
 static char	*get_piece(char *strg, int fd)
 {
@@ -66,7 +61,7 @@ static char	*get_line(char	*strg)
 	}
 	if (strg[i] && strg[i] == '\n')
 		line[i++] = '\n';
-	line[i]= '\0';
+	line[i] = '\0';
 	return (line);
 }
 
@@ -112,24 +107,3 @@ char	*get_next_line(int fd)
 		return (free(strg), line);
 	return (line);
 }
-
-/* #include <stdio.h>
-#include <fcntl.h>
-
-int	main(void)
-{
-	int		fd;
-	char	*str;
-
-	atexit(ft_lek);
-	fd = open("texto.tx", O_RDONLY);
-	str = get_next_line(fd);
-	while (str != NULL)
-	{
-		printf("%s", str);
-		str = get_next_line(fd);
-		write (1, &"\n", 2);
-	}
-	close(fd);
-	return (0);
-} */
