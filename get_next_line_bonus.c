@@ -6,7 +6,7 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:26:02 by escastel          #+#    #+#             */
-/*   Updated: 2023/06/13 14:02:22 by escastel         ###   ########.fr       */
+/*   Updated: 2023/06/16 16:40:38 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static char	*ft_clean(char *strg)
 	i = 0;
 	while (strg[i] && strg[i] != '\n')
 		i++;
-	if (strg[i] == '\0')
+	if (!strg[i])
 		return (free(strg), NULL);
 	new_line = (char *)ft_calloc((ft_strlen(strg) - i), sizeof(char));
 	if (!new_line)
